@@ -8,6 +8,7 @@ namespace ITHub.Models
         [Key]
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Value { get; set; }
         public string Description { get; set; }
         public ICollection<Job> Jobs { get; set; }
     }

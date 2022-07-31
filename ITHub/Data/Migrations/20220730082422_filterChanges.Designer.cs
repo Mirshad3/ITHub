@@ -4,14 +4,16 @@ using ITHub.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ITHub.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220730082422_filterChanges")]
+    partial class filterChanges
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -125,26 +127,6 @@ namespace ITHub.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("datePosteds");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Past 24 hrs",
-                            Value = "Past24hrs"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Past Week",
-                            Value = "PastWeek"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Past Month",
-                            Value = "PastMonth"
-                        });
                 });
 
             modelBuilder.Entity("ITHub.Models.ExperienceLevel", b =>
@@ -163,50 +145,6 @@ namespace ITHub.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("experienceLevels");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Internship",
-                            Value = "Internship"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Associate ",
-                            Value = "Associate "
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Junior",
-                            Value = "Junior"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Mid Level",
-                            Value = "MidLevel"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Senior",
-                            Value = "Senior"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Associate Lead",
-                            Value = "AssociateLead"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Name = "Lead",
-                            Value = "Lead"
-                        });
                 });
 
             modelBuilder.Entity("ITHub.Models.Job", b =>
@@ -315,26 +253,6 @@ namespace ITHub.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("jobFunction");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Frontend",
-                            Value = "Frontend"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Backend",
-                            Value = "Backend"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "IT Support",
-                            Value = "ITSupport"
-                        });
                 });
 
             modelBuilder.Entity("ITHub.Models.JobTechnologies", b =>
@@ -353,26 +271,6 @@ namespace ITHub.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("jobTechnologies");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "HTML",
-                            Value = "HTML"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = ".Net",
-                            Value = ".Net"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Node",
-                            Value = "Node"
-                        });
                 });
 
             modelBuilder.Entity("ITHub.Models.JobType", b =>
@@ -394,38 +292,6 @@ namespace ITHub.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("jobTypes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Part time",
-                            Value = "Part time"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Full time",
-                            Value = "Full time"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Freelance",
-                            Value = "Freelance"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Contract",
-                            Value = "Contract"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Temporary",
-                            Value = "Temporary"
-                        });
                 });
 
             modelBuilder.Entity("ITHub.Models.JobWithExperienceLevel", b =>
@@ -621,38 +487,6 @@ namespace ITHub.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("remuneration");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "By Yearly",
-                            Value = "ByYearly"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "By Monthly",
-                            Value = "ByMonthly"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "By Daily",
-                            Value = "ByDaily"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "By Hourly",
-                            Value = "ByHourly"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "By Contract",
-                            Value = "ByContract"
-                        });
                 });
 
             modelBuilder.Entity("ITHub.Models.RemunerationRange", b =>
@@ -665,38 +499,12 @@ namespace ITHub.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Value")
-                        .HasColumnType("int");
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("remunerationRanges");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "50k - 100k",
-                            Value = 1
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "100k - 150k",
-                            Value = 2
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "150k - 200k",
-                            Value = 3
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "200k+",
-                            Value = 4
-                        });
                 });
 
             modelBuilder.Entity("ITHub.Models.Samples", b =>
@@ -763,26 +571,6 @@ namespace ITHub.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("workModes");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Remote",
-                            Value = "Remote"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "On-Premise",
-                            Value = "On-Premise"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Hybrid",
-                            Value = "Hybrid"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
