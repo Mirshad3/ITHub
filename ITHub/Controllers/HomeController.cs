@@ -56,8 +56,8 @@ namespace ITHub.Controllers
                 jobType = new JobTypeVM {  Title = "Job Type", Type = "pill", Options = await _context.jobTypes.ToListAsync() },
                 remuneration = new RemunerationVM {  Title = "Remuneration", Type = "radio", Options = await _context.remuneration.ToListAsync() },
                 workMode = new WorkModeVM {  Title = "Workmode", Type = "radio", Options = await _context.workModes.ToListAsync() },
-                remunerationRange = new RemunerationRangeVM { Title = "Workmode", Type = "radio", Options = await _context.remunerationRanges.ToListAsync() },
-                datePosted = new DatePostedVM { Title = "Workmode", Type = "radio", Options = await _context.datePosteds.ToListAsync() }
+                remunerationRange = new RemunerationRangeVM { Title = "Remuneration Range", Type = "radio", Options = await _context.remunerationRanges.ToListAsync() },
+                datePosted = new DatePostedVM { Title = "Date Posted", Type = "radio", Options = await _context.datePosteds.ToListAsync() }
 
             };
             return filters; 
