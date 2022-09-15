@@ -1,0 +1,153 @@
+﻿@model ITHub.Models.Job
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+}
+  
+<h4>Create</h4>
+<hr />
+<div class="row">
+     <form asp-action="Create" class="w-100" enctype="multipart/form-data" method="post">
+         <div class="container row">
+    <div class="col-md-4">
+       
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Location" class="control-label"></label>
+                <select asp-for="Location" class ="form-control" asp-items="ViewBag.Location"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompanyId" class="control-label"></label>
+                <select asp-for="CompanyId" class ="form-control" asp-items="ViewBag.CompanyId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobSalary" class="control-label"></label>
+                <input asp-for="JobSalary" class="form-control" />
+                <span asp-validation-for="JobSalary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobWithJobTypes" class="control-label"></label>
+           <select id="multiple" asp-for="SelectedjobTypeIds" multiple="multiple" class="selectpicker form-control" asp-items="ViewBag.JobType">
+        </select>  </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PostingDate" class="control-label"></label>
+                <input asp-for="PostingDate" class="form-control" />
+                <span asp-validation-for="PostingDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExpireDate" class="control-label"></label>
+                <input asp-for="ExpireDate" class="form-control" />
+                <span asp-validation-for="ExpireDate" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="NoOfVacancy" class="control-label"></label>
+                <input asp-for="NoOfVacancy" class="form-control" />
+                <span asp-validation-for="NoOfVacancy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BriefDescription" class="control-label"></label>
+                <textarea asp-for="BriefDescription" rows="5" class="form-control" ></textarea>
+
+                <span asp-validation-for="BriefDescription" class="text-danger"></span>
+            </div>
+            
+           
+          
+    </div>
+   <div class="col-md-4">
+       <div class="form-group">
+                <label asp-for="LongDescription" class="control-label"></label>
+                <textarea asp-for="LongDescription" rows="5" class="form-control" ></textarea>
+                <span asp-validation-for="LongDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsPegged" /> @Html.DisplayNameFor(model => model.IsPegged)
+                </label>
+            </div>
+        <div class="form-group">
+                <label asp-for="CurrencyTypeId" class="control-label"></label>
+               <select asp-for="CurrencyTypeId" class ="form-control" asp-items="ViewBag.currencyTypes"></select>
+                <span asp-validation-for="CurrencyTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobWithFunction" class="control-label"></label>
+                <select id="multiple" asp-for="SelectedjobFunctionsIds" multiple="multiple" class="selectpicker form-control" asp-items="ViewBag.jobFunction">
+        </select>
+                @*<input asp-for="JobFunctionId" class="form-control" />*@
+                <span asp-validation-for="JobWithFunction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobWithTechnologies" class="control-label"></label>
+                 <select id="multiple" asp-for="SelectedjobTechnologiesIds" multiple="multiple" class="selectpicker form-control" asp-items="ViewBag.jobTechnologies">
+        </select>
+               @* <input asp-for="TechnologiesId" class="form-control" />*@
+                <span asp-validation-for="JobWithExperienceLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobWithExperienceLevel" class="control-label"></label>
+                <select id="multiple" asp-for="SelectedexperienceLevelIds" multiple="multiple" class="selectpicker form-control" asp-items="ViewBag.experienceLevels">
+        </select>
+                <span asp-validation-for="JobWithExperienceLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkmodeId" class="control-label"></label>               
+         <select asp-for="WorkmodeId" class ="form-control" asp-items="ViewBag.workModes"></select>
+                <span asp-validation-for="WorkmodeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RemunerationId" class="control-label"></label>
+                 <select asp-for="RemunerationId" class ="form-control" asp-items="ViewBag.remuneration"></select>
+                 
+                <span asp-validation-for="RemunerationId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="JobImageId" class="control-label"></label>
+               <input type="file" name="file" class="form-control" />
+                @Html.ValidationMessage("CustomError")
+                <span asp-validation-for="JobImageId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RemunerationMax" class="control-label"></label>
+                <input asp-for="RemunerationMax" class="form-control" />
+                <span asp-validation-for="RemunerationMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RemunerationMin" class="control-label"></label>
+                <input asp-for="RemunerationMin" class="form-control" />
+                <span asp-validation-for="RemunerationMin" class="text-danger"></span>
+            </div>
+             <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+   </div>
+
+    
+               </div>
+        </form>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

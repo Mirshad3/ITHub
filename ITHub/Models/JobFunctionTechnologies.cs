@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ITHub.Models
@@ -9,6 +10,7 @@ namespace ITHub.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Value { get; set; }
+        public List<JobWithFunction> JobWithFunction { get; set; }
 
     }
     public class JobWithFunction
@@ -28,6 +30,7 @@ namespace ITHub.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Value { get; set; }
+        public List<JobWithTechnologies> JobWithTechnologies { get; set; }
     }
     public class JobWithTechnologies
     {

@@ -29,6 +29,8 @@ namespace ITHub.Data
         public DbSet<JobTechnologies> jobTechnologies { get; set; }
         public DbSet<JobWithExperienceLevel> jobWithExperienceLevels { get; set; }
         public DbSet<JobWithFunction> jobWithFunction { get; set; }
+        public DbSet<JobWithJobType> jobWithJobType { get; set; }
+        
         public DbSet<JobWithTechnologies> jobWithTechnologies { get; set; }
         public DbSet<WorkMode> workModes { get; set; }
         public DbSet<Remuneration> remuneration { get; set; }

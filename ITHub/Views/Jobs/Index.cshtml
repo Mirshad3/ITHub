@@ -1,0 +1,102 @@
+﻿@model IEnumerable<ITHub.Models.Job>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th> 
+            
+            <th>
+                @Html.DisplayNameFor(model => model.ExpireDate)
+            </th> 
+            <th>
+                @Html.DisplayNameFor(model => model.NoOfVacancy)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.IsPegged)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.JobImageId)
+            </th>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Locations)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CurrencyType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Remuneration)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorkMode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td> 
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.ExpireDate)
+            </td> 
+            <td>
+                @Html.DisplayFor(modelItem => item.NoOfVacancy)
+            </td>
+           
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPegged)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.JobImageId)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.Locations.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CurrencyType.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Remuneration.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorkMode.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
