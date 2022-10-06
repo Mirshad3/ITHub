@@ -134,6 +134,22 @@ else
                             </p>
                         </a>
                     </li>
+                     <li class="nav-item ">
+                        <a asp-controller="Jobs" asp-action="Index" class="nav-link @Url.MakeActiveClass("AppliedJobs","Index")">
+                            <i class="nav-icon fas fa-registered"></i>
+                            <p>
+                                AppliedJobs
+                            </p>
+                        </a>
+                    </li>
+                     <li class="nav-item ">
+                        <a asp-controller="Jobs" asp-action="Index" class="nav-link @Url.MakeActiveClass("Banners","Index")">
+                            <i class="nav-icon fas fa-registered"></i>
+                            <p>
+                                Banners
+                            </p>
+                        </a>
+                    </li>
                 }
             </ul>
         </nav>

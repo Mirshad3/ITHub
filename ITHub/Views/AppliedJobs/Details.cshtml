@@ -1,45 +1,39 @@
-﻿@model ITHub.Models.Banners
+﻿@model ITHub.Models.AppliedJobs
 
 @{
     ViewData["Title"] = "Details";
-       Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 }
 
 <h1>Details</h1>
 
 <div>
-    <h4>Banners</h4>
+    <h4>AppliedJobs</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.ApplicationState)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Title)
+            @Html.DisplayFor(model => model.ApplicationState)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Link)
+            @Html.DisplayNameFor(model => model.jobAppliedDate)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Link)
+            @Html.DisplayFor(model => model.jobAppliedDate)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ImagePath)
+            @Html.DisplayNameFor(model => model.Jobs)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ImagePath)
+            @Html.DisplayFor(model => model.Jobs.Id)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Status)
+            @Html.DisplayNameFor(model => model.CvDatas)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Status)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.CreatedDate)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.CreatedDate)
+            @Html.DisplayFor(model => model.CvDatas.Id)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.UserId)

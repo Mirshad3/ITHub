@@ -41,7 +41,7 @@ namespace ITHub.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
+        
         [HttpGet, Route("~/Filters")]
         [AllowAnonymous]
         public async Task<IActionResult> GetFilters()
@@ -66,6 +66,7 @@ namespace ITHub.Controllers
         //////experienceLevel=Internship,Associate &jobTechnologies=Node,.Net
         //////&jobFunctions=Frontend&jobType=Temporary,Contract
         //////&remuneration=ByMonthly&remunerationRange=3&datePosted=Past24hrs
+        [Authorize]
         [HttpGet, Route("~/JobList")]
         [AllowAnonymous]
         public async Task<IActionResult> JobsWithSearch(string experienceLevel, string jobTechnologies, string jobFunctions, string jobType,string remuneration,string remunerationRange,string datePosted, string workMode, string searchString, [FromQuery] PaginationFilter filter)
@@ -162,7 +163,7 @@ namespace ITHub.Controllers
             return Ok(pagedReponse);
             
         }
-        [Route("~/JobSearch")]
+        //[Route("~/JobSearch")]
         public async Task<IActionResult> JobsSearch(string search,string searchString, [FromQuery] PaginationFilter filter)
         {
             var route = Request.Path.Value;

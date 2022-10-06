@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ITHub.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
@@ -38,6 +38,9 @@ namespace ITHub.Data
         public DbSet<CurrencyType> currencyTypes  { get; set; }
         public DbSet<RemunerationRange> remunerationRanges { get; set; }
         public DbSet<DatePosted> datePosteds { get; set; }
+        public DbSet<Notifications> notifications { get; set; }
+        public DbSet<AppliedJobs> appliedJobs { get; set; }
+        public DbSet<CvData> cvDatas { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -51,9 +54,9 @@ namespace ITHub.Data
                 new ExperienceLevel() {   Id=6,Name = "Associate Lead", Value = "AssociateLead" },
                 new ExperienceLevel() {   Id=7,Name = "Lead", Value = "Lead" });
             modelBuilder.Entity<JobTechnologies>().HasData(
-               new JobTechnologies() { Id=1,Name = "HTML", Value = "HTML" },
-               new JobTechnologies() { Id=2,Name = ".Net", Value = ".Net" },
-               new JobTechnologies() { Id=3,Name = "Node", Value = "Node" });
+               new JobTechnologies() { Id=1,Name = "HTML",ImageUrl= "img/TechLogo/HTML.png", Value = "HTML" },
+               new JobTechnologies() { Id=2,Name = ".Net", ImageUrl = "img/TechLogo/net.png", Value = ".Net" },
+               new JobTechnologies() { Id=3,Name = "Node", ImageUrl = "img/TechLogo/node.png", Value = "Node" });
             modelBuilder.Entity<JobFunction>().HasData(
                new JobFunction() { Id=1,Name = "Frontend", Value = "Frontend" },
                new JobFunction() { Id=2,Name = "Backend", Value = "Backend" },

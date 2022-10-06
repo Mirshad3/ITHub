@@ -1,15 +1,13 @@
-//namespace ITHub.ViewModels;
 
-//using System.Text.Json.Serialization;
 
-//public class User
-//{
-//    public int Id { get; set; }
-//    public string FirstName { get; set; }
-//    public string LastName { get; set; }
-//    public string Username { get; set; }
-//    public Role Role { get; set; }
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
+using System.Threading.Tasks;
 
-//    [JsonIgnore]
-//    public string PasswordHash { get; set; }
-//}
+public class ApplicationUser : IdentityUser
+{
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string ProfilePicURL { get; set; }
+
+}

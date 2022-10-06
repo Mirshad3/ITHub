@@ -19,6 +19,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.OpenApi.Models;
 
 namespace ITHub
 {
@@ -37,10 +38,20 @@ namespace ITHub
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            ////services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            ////    .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
-             services.AddControllers().AddNewtonsoftJson(options =>
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "ITHub API",
+                    Description = "An ASP.NET Core Web API for managing ITHub Portacol"
+                });
+            });
+            services.AddEndpointsApiExplorer();
+            services.AddControllers().AddNewtonsoftJson(options =>
     options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
 ); services.AddHttpContextAccessor();
             services.AddSingleton<IUriService>(o =>
@@ -61,40 +72,40 @@ services.AddMvc(o =>
 });
 
 
-    //        services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
-    //.AddEntityFrameworkStores<ApplicationDbContext>()
-    //.AddDefaultTokenProviders();
-
+            services.AddIdentity<ApplicationUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultUI()
+    .AddDefaultTokenProviders();
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequireDigit = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+            });
             // Adding Authentication
-        ////    services.AddAuthentication(options =>
-        ////    {
-        ////        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        ////        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-        ////        options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-        ////    })
-
-        ////    // Adding Jwt Bearer
-        ////    .AddJwtBearer(options =>
-        ////    {
-        ////        options.SaveToken = true;
-        ////        options.RequireHttpsMetadata = false;
-        ////        options.TokenValidationParameters = new TokenValidationParameters()
-        ////        {
-        ////            ValidateIssuer = true,
-        ////            ValidateAudience = true,
-        ////            ValidAudience = Configuration["JWT:ValidAudience"],
-        ////            ValidIssuer = Configuration["JWT:ValidIssuer"],
-        ////            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
-        ////        };
-        ////    });
-  }
+            services.AddAuthentication().AddJwtBearer(options =>
+                {
+                    options.SaveToken = true;
+                    options.RequireHttpsMetadata = false;
+                    options.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        ValidateIssuer = true,
+                        ValidateAudience = true,
+                        ValidAudience = Configuration["JWT:ValidAudience"],
+                        ValidIssuer = Configuration["JWT:ValidIssuer"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:Secret"]))
+                    };
+                });
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
+        { 
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();                
+                app.UseDeveloperExceptionPage();
+                //app.UseSwagger();
+               
             }
             else
             {
@@ -102,14 +113,18 @@ services.AddMvc(o =>
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseSwagger(options =>
+            {
+                options.SerializeAsV2 = true;
+            });
+            app.UseSwaggerUI();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthentication();
-            app.UseAuthorization();
-
+            app.UseAuthorization(); 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

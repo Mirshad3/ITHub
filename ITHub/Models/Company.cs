@@ -16,7 +16,9 @@ namespace ITHub.Models
 		public string Website { get; set; }
 		public string Status { get; set; }  
 		public DateTime CreatedDate { get; set; }
-
+		[NotMapped]
+		public int Openings { get; set; }
+		
 
 	}
 } 

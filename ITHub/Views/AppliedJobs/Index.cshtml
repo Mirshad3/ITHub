@@ -1,8 +1,8 @@
-﻿@model IEnumerable<ITHub.Models.Banners>
+﻿@model IEnumerable<ITHub.Models.AppliedJobs>
 
 @{
     ViewData["Title"] = "Index";
-       Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
+    Layout = "~/Views/Shared/AdminLTE/_Layout.cshtml";
 }
 
 <h1>Index</h1>
@@ -14,19 +14,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                @Html.DisplayNameFor(model => model.ApplicationState)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Link)
+                @Html.DisplayNameFor(model => model.jobAppliedDate)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ImagePath)
+                @Html.DisplayNameFor(model => model.Jobs)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedDate)
+                @Html.DisplayNameFor(model => model.CvDatas)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.UserId)
@@ -38,19 +35,16 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
+                @Html.DisplayFor(modelItem => item.ApplicationState)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Link)
+                @Html.DisplayFor(modelItem => item.jobAppliedDate)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ImagePath)
+                @Html.DisplayFor(modelItem => item.Jobs.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CreatedDate)
+                @Html.DisplayFor(modelItem => item.CvDatas.Id)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.UserId)

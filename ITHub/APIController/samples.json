@@ -1,0 +1,826 @@
+Map<String, dynamic> sampleUserData = {
+  "fullName": "Ahmed Akmal",
+  // "fullName": "",
+  "email": "akmal.ahmed525@gmail.com",
+  "phoneNumber": "+94 777 263 383",
+  "profilePicURL": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+  "isAuthenticated": true
+};
+
+
+//////////////////////////
+
+
+const List<Map<String, dynamic>> trendingTechnologyList = [
+  {
+    "id": "004",
+    "imageUrl": "https://storage.googleapis.com/cms-storage-bucket/c823e53b3a1a7b0d36a9.png",
+    "name": "Flutter"
+  },
+  {
+    "id": "005",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
+    "name": "React"
+  },
+  {
+    "id": "005",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/1200px-Tensorflow_logo.svg.png",
+    "name": "Tensorflow"
+  },
+  {
+    "id": "005",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Microsoft_.NET_logo.svg/2048px-Microsoft_.NET_logo.svg.png",
+    "name": ".Net"
+  },
+  {
+    "id": "006",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Go_Logo_Blue.svg/1200px-Go_Logo_Blue.svg.png",
+    "name": "Golang"
+  },
+  {
+    "id": "006",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/1200px-Node.js_logo.svg.png",
+    "name": "Node.js"
+  },
+  {
+    "id": "001",
+    "imageUrl": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png",
+    "name": "Python"
+  },
+  {
+    "id": "002",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png",
+    "name": "Java"
+  },
+  {
+    "id": "003",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Kotlin_Icon.svg/2048px-Kotlin_Icon.svg.png",
+    "name": "Kotlin"
+  },
+];
+
+
+////////////////////////////////////
+
+const List<Map<String, dynamic>> trendingCompanyList = [
+  {
+    "key": "004",
+    "imageUrl": "https://media-exp1.licdn.com/dms/image/C4E0BAQHUnyI5clnOrA/company-logo_200_200/0/1594675990525?e=2147483647&v=beta&t=uAzJSY4871gLxNliTtVNK3jRNiz2ndh2-6EbPNP-_-E",
+    "name": "Virtusa Polaris (Pvt) Ltd",
+    "openings": "5",
+    "location": "Colombo, Sri Lanka/Remote"
+  },
+  {
+    "key": "005",
+    "imageUrl": "https://wso2.cachefly.net/wso2/sites/images/brand/downloads/wso2-inverted-logo.png",
+    "name": "WSO2 Inc",
+    "openings": "3",
+    "location": "Remote"
+  },
+  {
+    "key": "005",
+    "imageUrl": "https://media-exp2.licdn.com/dms/image/C4E0BAQGmdCWfZj-70Q/company-logo_200_200/0/1519905867850?e=2147483647&v=beta&t=uudwxO4wQyHI2cdXBNv9IZ4LfDxTDMcA08A2ykx2kYQ",
+    "name": "Eyepax IT Consulting (Pvt) Ltd",
+    "openings": "3",
+    "location": "Jaffna, Sri Lanka"
+  },
+  {
+    "key": "005",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Infor_logo.svg/1200px-Infor_logo.svg.png",
+    "name": "Infor",
+    "openings": "2",
+    "location": "Colombo, (Remote)"
+  },
+  {
+    "key": "004",
+    "imageUrl": "https://media-exp1.licdn.com/dms/image/C4E0BAQHUnyI5clnOrA/company-logo_200_200/0/1594675990525?e=2147483647&v=beta&t=uAzJSY4871gLxNliTtVNK3jRNiz2ndh2-6EbPNP-_-E",
+    "name": "Virtusa Polaris (Pvt) Ltd",
+    "openings": "2",
+    "location": "Colombo, Sri Lanka"
+  },
+];
+
+
+///////////////////////////////////
+
+
+// 2022-07-10 03:06:13.854
+List<Map<String, dynamic>> notificationList = [
+  {
+    "_id": "6300308a445f6194c207eb5a",
+    "isRead": false,
+    "iconUrl": "https://media-exp1.licdn.com/dms/image/C4D0BAQHHJzr5P62wcA/company-logo_200_200/0/1657030127223?e=2147483647&v=beta&t=tgq0N5M_u-h_xbdihEyhOqLFDgD6DKgwgaSRQngjL6E",
+    "title": "CANOPOLY",
+    "description": "Voluptate veniam fugiat eiusmod excepteur mollit sit ea excepteur dolore. Ipsum eiusmod ea quis incididunt ea et duis reprehenderit elit. Ex excepteur reprehenderit sunt veniam labore minim tempor. Esse et Lorem aute enim ullamco adipisicing fugiat elit Lorem culpa. Consequat do culpa nisi exercitation nisi laborum cupidatat fugiat cillum fugiat sint nostrud culpa consectetur.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308a6f428086baf2de33",
+    "isRead": false,
+    "iconUrl": "https://www.ifs.com/-/media10/project/ifs/ifs/images/homepage/ifs-logo-2021-background.jpg",
+    "title": "AFFLUEX",
+    "description": "Elit laborum ex pariatur incididunt laboris est cillum dolore dolore officia qui ex incididunt. Enim quis duis aliqua incididunt irure proident. Qui velit veniam minim id eu enim nulla culpa sunt. Non voluptate reprehenderit veniam sint reprehenderit incididunt mollit non do laborum nostrud dolore do exercitation. Ex fugiat Lorem exercitation non dolore labore aliquip cupidatat.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308a42d51c28acece2fc",
+    "isRead": false,
+    "iconUrl": "https://media-exp1.licdn.com/dms/image/C4E0BAQHUnyI5clnOrA/company-logo_200_200/0/1594675990525?e=1668643200&v=beta&t=uZ-C6mR0G1-AwL0-xQnk8pYD3I85cxAdK0Ekdt6O1ck",
+    "title": "GEEKETRON",
+    "description": "Id nisi ea Lorem cillum Lorem qui consectetur aliquip magna. Cupidatat non sunt in irure officia sit tempor laboris excepteur mollit culpa amet. Reprehenderit consequat nulla nulla eiusmod ad esse ea cupidatat anim sint ad magna ut.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308a33fc495c80d0d645",
+    "isRead": true,
+    "iconUrl": "https://media-exp1.licdn.com/dms/image/C4D0BAQHHJzr5P62wcA/company-logo_200_200/0/1657030127223?e=2147483647&v=beta&t=tgq0N5M_u-h_xbdihEyhOqLFDgD6DKgwgaSRQngjL6E",
+    "title": "EVENTAGE",
+    "description": "Occaecat dolor dolor reprehenderit in reprehenderit velit Lorem. Veniam ex sunt voluptate laboris occaecat velit tempor eiusmod do elit occaecat. Cupidatat aute nisi minim et cillum deserunt voluptate ullamco.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308a62c065cf7a719c19",
+    "isRead": false,
+    "iconUrl": "https://media-exp1.licdn.com/dms/image/C4E0BAQHUnyI5clnOrA/company-logo_200_200/0/1594675990525?e=1668643200&v=beta&t=uZ-C6mR0G1-AwL0-xQnk8pYD3I85cxAdK0Ekdt6O1ck",
+    "title": "POLARAX",
+    "description": "Proident ullamco officia cupidatat exercitation et eu. Pariatur eiusmod ea Lorem laboris ullamco aute aute ut exercitation ipsum. Sint do est duis ipsum exercitation laboris nulla eiusmod ipsum. Deserunt incididunt irure incididunt aliqua dolor esse ea eiusmod adipisicing. Do aliqua ut ad aliquip eiusmod enim velit duis officia elit do duis.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308ae4fa24eea899e5c1",
+    "isRead": false,
+    "iconUrl": "https://www.ifs.com/-/media10/project/ifs/ifs/images/homepage/ifs-logo-2021-background.jpg",
+    "title": "SONGLINES",
+    "description": "Dolore esse excepteur commodo ea dolore incididunt reprehenderit cupidatat. Consectetur culpa excepteur quis sit anim sint cupidatat incididunt irure adipisicing. Ullamco enim nisi ex fugiat excepteur anim Lorem dolore proident sint ipsum incididunt. Adipisicing consectetur quis ex labore.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308aa11d1f2c744423fd",
+    "isRead": true,
+    "iconUrl": "https://media-exp1.licdn.com/dms/image/C4E0BAQHUnyI5clnOrA/company-logo_200_200/0/1594675990525?e=1668643200&v=beta&t=uZ-C6mR0G1-AwL0-xQnk8pYD3I85cxAdK0Ekdt6O1ck",
+    "title": "CANDECOR",
+    "description": "Tempor sunt laboris est pariatur elit ipsum duis tempor aliqua veniam reprehenderit. Proident laborum incididunt mollit non veniam laborum ex non ad fugiat proident commodo. Velit labore tempor eu fugiat minim ea culpa culpa voluptate eu.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308a59b1b7f4298bb5f3",
+    "isRead": false,
+    "iconUrl": "https://media-exp1.licdn.com/dms/image/C4D0BAQHHJzr5P62wcA/company-logo_200_200/0/1657030127223?e=2147483647&v=beta&t=tgq0N5M_u-h_xbdihEyhOqLFDgD6DKgwgaSRQngjL6E",
+    "title": "INSURETY",
+    "description": "Ea aute labore ad proident commodo sint esse exercitation do irure mollit. Non tempor commodo velit exercitation incididunt ullamco dolor aliquip quis incididunt amet in minim. Incididunt sint aliqua Lorem velit non pariatur non commodo. Culpa labore sint esse excepteur labore ut ex magna deserunt tempor. Enim deserunt adipisicing ipsum veniam in consequat officia Lorem deserunt.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308a88a0e54af0602968",
+    "isRead": true,
+    "iconUrl": "https://media-exp1.licdn.com/dms/image/C4E0BAQHUnyI5clnOrA/company-logo_200_200/0/1594675990525?e=1668643200&v=beta&t=uZ-C6mR0G1-AwL0-xQnk8pYD3I85cxAdK0Ekdt6O1ck",
+    "title": "ZENSOR",
+    "description": "Esse minim eiusmod dolore id occaecat consectetur irure nisi commodo excepteur. Labore est excepteur excepteur tempor mollit. Eiusmod consectetur qui eu labore incididunt voluptate dolor adipisicing amet. Eiusmod duis magna consectetur ullamco Lorem aliqua dolor sunt cillum eu esse ut tempor. Laborum esse veniam ullamco magna et est et id duis. Qui ea exercitation non ex commodo ipsum proident occaecat aliqua.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308a492b603e9b293289",
+    "isRead": true,
+    "iconUrl": "https://media-exp1.licdn.com/dms/image/C4D0BAQHHJzr5P62wcA/company-logo_200_200/0/1657030127223?e=2147483647&v=beta&t=tgq0N5M_u-h_xbdihEyhOqLFDgD6DKgwgaSRQngjL6E",
+    "title": "BUZZNESS",
+    "description": "Ut labore deserunt esse anim laborum aute excepteur tempor ad. Lorem laborum ipsum ipsum qui duis enim labore eu irure tempor cillum. Commodo non occaecat culpa adipisicing anim nostrud fugiat incididunt pariatur aliqua. Incididunt ipsum aute ad aute pariatur nulla. Ullamco in labore et anim.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308a60f32003eed1b3c3",
+    "isRead": true,
+    "iconUrl": "https://media-exp1.licdn.com/dms/image/C4D0BAQFchI_Xw-FFhQ/company-logo_200_200/0/1597299923263?e=2147483647&v=beta&t=pB9fw2cbWg05xWaS7Z12R9UaS09pO8pnJ2cDzQx9t-g",
+    "title": "RODEOMAD",
+    "description": "Ad duis exercitation amet incididunt nulla Lorem commodo aliqua reprehenderit officia ipsum proident. Fugiat et aliquip aute sit exercitation velit do labore consectetur aliqua. Id aute ex ex qui proident amet veniam incididunt est. Anim dolore do nostrud ipsum anim proident exercitation excepteur qui deserunt dolore occaecat aute commodo. Elit velit duis Lorem pariatur dolore esse ad proident reprehenderit nulla labore laborum in. Labore incididunt minim velit adipisicing veniam enim excepteur ea laboris ea labore duis. Do consectetur adipisicing minim ut deserunt aliqua ipsum aliquip aliqua.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308a646e15af2405b424",
+    "isRead": true,
+    "iconUrl": "https://media-exp1.licdn.com/dms/image/C4D0BAQHHJzr5P62wcA/company-logo_200_200/0/1657030127223?e=2147483647&v=beta&t=tgq0N5M_u-h_xbdihEyhOqLFDgD6DKgwgaSRQngjL6E",
+    "title": "AMTAS",
+    "description": "Eiusmod pariatur consequat aute pariatur id officia mollit tempor culpa occaecat aliqua dolore. Aliquip officia enim esse et incididunt nisi consequat sint proident sunt Lorem. Eiusmod aute eu ad mollit Lorem esse.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308ad14445c62f1fa360",
+    "isRead": false,
+    "iconUrl": "https://www.ifs.com/-/media10/project/ifs/ifs/images/homepage/ifs-logo-2021-background.jpg",
+    "title": "CONFERIA",
+    "description": "Et nisi exercitation ea in fugiat non dolore fugiat sint quis. Laboris veniam magna voluptate proident laborum. Minim velit laborum reprehenderit est laborum sunt deserunt est proident ad labore eu. Incididunt culpa minim anim minim pariatur exercitation duis veniam irure magna. Irure ad officia tempor nisi adipisicing elit in deserunt nostrud.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308ac7cd6d4ea8b019b2",
+    "isRead": true,
+    "iconUrl": "https://media-exp1.licdn.com/dms/image/C4D0BAQFchI_Xw-FFhQ/company-logo_200_200/0/1597299923263?e=2147483647&v=beta&t=pB9fw2cbWg05xWaS7Z12R9UaS09pO8pnJ2cDzQx9t-g",
+    "title": "KOZGENE",
+    "description": "Enim aliquip est sunt sunt irure non. Incididunt laborum id officia nostrud ad exercitation minim cupidatat labore ad. Ullamco quis nisi eiusmod anim proident non cupidatat excepteur proident. Excepteur labore sunt tempor adipisicing deserunt est voluptate. Veniam id qui Lorem minim. Dolor ex proident tempor aute voluptate eiusmod ipsum sit minim non Lorem eiusmod minim. Quis sunt sunt cupidatat labore culpa et sint velit aliqua.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  },
+  {
+    "_id": "6300308a3a3585e1359da09f",
+    "isRead": true,
+    "iconUrl": "https://media-exp1.licdn.com/dms/image/C4D0BAQHHJzr5P62wcA/company-logo_200_200/0/1657030127223?e=2147483647&v=beta&t=tgq0N5M_u-h_xbdihEyhOqLFDgD6DKgwgaSRQngjL6E",
+    "title": "OCTOCORE",
+    "description": "Amet aute laborum voluptate esse. Consectetur adipisicing ut aliquip quis occaecat quis ipsum et officia. Culpa consequat magna dolor eiusmod amet. Aliqua nisi eiusmod incididunt amet occaecat.\\r\\n",
+    "publishedTime": "2022-07-10 03:06:13.854"
+  }
+];
+
+
+/////////////////////////////////
+
+
+import 'package:lanka_it_hub/models/models.dart'; List<JobData> jobDataList = [
+  JobData(
+  id
+  :
+  '000',
+  companyName
+  :
+  'LucyTech (Pvt) Ltd',
+  jobType
+  :
+  'Part Time',
+  jobLocation
+  :
+  'Colombo, Sri Lanka',
+  jobTitle
+  :
+  'Senior Software Engineer (Mobile) - Android(Kotlin), IOS(Swift) & Flutter or React Native',
+  postedDate
+  :
+  '2022-07-10 03:06:13.854',
+  expiryDate
+  :
+  '2022-07-25 03:06:13.854',
+  companyLogoUrl
+  :
+  'https://media-exp1.licdn.com/dms/image/C560BAQGaqKEluvuLAw/company-logo_200_200/0/1645762492030?e=2147483647&v=beta&t=14gyAy3SFEAxiYIX3qgYncZXGkWfVlSczE5ihsfJlLk',
+  briefJobDescription
+  :
+  ''
+  '- Android (Kotlin), IOS (Swift)
+  -
+  Flutter
+  /
+  React
+  Native
+  -
+  3
+  years
+  experience
+  ''
+  ',
+  amenityList
+  :
+  []
+  ),
+  JobData(
+  id
+  :
+  '001',
+  companyName
+  :
+  'WSO2',
+  jobType
+  :
+  'Full Time',
+  jobLocation
+  :
+  'Jaffna, Sri Lanka',
+  jobTitle
+  :
+  'Software Architect - Ballerina Compiler Design',
+  peggingCurrency
+  :
+  'USD',
+  postedDate
+  :
+  '2022-07-22 03:06:13.854',
+  expiryDate
+  :
+  '2022-07-22 03:06:13.854',
+  companyLogoUrl
+  :
+  'https://wso2.cachefly.net/wso2/sites/images/brand/downloads/wso2-inverted-logo.png',
+  briefJobDescription
+  :
+  ''
+  '- Comprehensive knowledge in LLVM technology
+  -
+  Experienced
+  in
+  C/C++
+  languages
+  -
+  3
+  years
+  experience
+  ''
+  ',
+  amenityList
+  :
+  [ "Full Time" ]
+  ),
+  JobData(
+  id
+  :
+  '005',
+  companyName
+  :
+  'WSO2',
+  jobType
+  :
+  'Full Time',
+  jobLocation
+  :
+  'Jaffna, Sri Lanka',
+  jobTitle
+  :
+  'Software Architect - Ballerina Compiler Design',
+  peggingCurrency
+  :
+  'USD',
+  postedDate
+  :
+  '2022-07-22 03:06:13.854',
+  expiryDate
+  :
+  '2022-07-22 03:06:13.854',
+  companyLogoUrl
+  :
+  'https://wso2.cachefly.net/wso2/sites/images/brand/downloads/wso2-inverted-logo.png',
+  briefJobDescription
+  :
+  ''
+  '
+  An
+  Unordered
+  HTML
+  List
+  ----------------------
+
+  *
+  Coffee
+  *
+  Tea
+  *
+  Milk
+
+  An
+  Ordered
+  HTML
+  List
+  --------------------
+
+  1.
+  Coffee
+  2.
+  Tea
+  3.
+  Milk
+  ''
+  ',
+  amenityList
+  :
+  [ "Full Time" ]
+  ),
+  JobData(
+  id
+  :
+  '002',
+  companyName
+  :
+  'Eyepax IT Consulting (Pvt) Ltd',
+  jobType
+  :
+  'Full Time',
+  jobLocation
+  :
+  'Colombo, Sri Lanka',
+  jobTitle
+  :
+  'Database Administrator - IBM DB2',
+  peggingCurrency
+  :
+  'INR',
+  postedDate
+  :
+  '2021-06-22 03:06:13.854',
+  expiryDate
+  :
+  '2022-10-08 21:44:16.402',
+  companyLogoUrl
+  :
+  'https://media-exp2.licdn.com/dms/image/C4E0BAQGmdCWfZj-70Q/company-logo_200_200/0/1519905867850?e=2147483647&v=beta&t=uudwxO4wQyHI2cdXBNv9IZ4LfDxTDMcA08A2ykx2kYQ',
+  briefJobDescription
+  :
+  ''
+  '- Comprehensive knowledge in LLVM technology
+  -
+  Experienced
+  in
+  C/C++
+  languages
+
+
+  Lorem
+  ipsum
+  dolor
+  sit
+  amet,
+  consectetur
+  adipiscing
+  elit,
+  sed
+  do
+  eiusmod
+  tempor
+  incididunt
+  ut
+  labore
+  et
+  dolore
+  magna
+  aliqua.
+  Ut
+  enim
+  ad
+  minim
+  veniam,
+  quis
+  nostrud
+  exercitation
+  ullamco
+  laboris
+  nisi
+  ut
+  aliquip
+  ex
+  ea
+  commodo
+  consequat.
+  Duis
+  aute
+  irure
+  dolor
+  in
+  reprehenderit
+  in
+  voluptate
+  velit
+  esse
+  cillum
+  dolore
+  eu
+  fugiat
+  nulla
+  pariatur.
+  Excepteur
+  sint
+  occaecat
+  cupidatat
+  non
+  proident,
+  sunt
+  in
+  culpa
+  qui
+  officia
+  deserunt
+  mollit
+  anim
+  id
+  est
+  laborum.
+  ''
+  ',
+  amenityList
+  :
+  [ "Full Time" ]
+  ),
+];
+
+
+///////////////////////////////
+
+const List<Map<String, dynamic>> carouselDataList = [
+  {
+    "key": "004",
+    "imageUrl": "https://media-exp1.licdn.com/dms/image/C4D22AQH406SB67h_2Q/feedshare-shrink_2048_1536/0/1653402699361?e=1666224000&v=beta&t=4nfGMmav4pX9q3SoxDB-_AVy-84S_abfjCTZTor9WE0",
+  },
+  {
+    "key": "004",
+    "imageUrl": "https://media-exp1.licdn.com/dms/image/C5622AQHx907QOND39g/feedshare-shrink_1280/0/1658953321991?e=1666224000&v=beta&t=On5npIQa-xoLUI45tN0rUQTJHL481jsf4wDcG0l7GhE",
+  },
+  {
+    "key": "004",
+    "imageUrl": "https://media-exp1.licdn.com/dms/image/sync/D4D34AQGUj3Qs56I-Cw/ugc-proxy-shrink_800/0/1660125976848?e=1664010000&v=beta&t=qBrX58jzEgzD4UuuKGzD2v_aYlxp8MTGgrq-syByYms",
+  },
+  {
+    "key": "004",
+    "imageUrl": "https://media-exp1.licdn.com/dms/image/C5622AQFnH-MXXsffgg/feedshare-shrink_800/0/1663242297915?e=1666224000&v=beta&t=9dhw62HJXTkBKS2OrF5fi-DBwWiU95Tb_aBAK7XDaXU",
+  }
+];
+////////////////////////////////////
+
+const appliedJobListSample = {
+  "page": 1,
+  "limit": 25,
+  "totalPages": 3,
+  "data": [
+    {
+      "id": "631330ad30bfbfe3b103bee9",
+      "title": "Software Engineer (.Net/C# Development)",
+      "companyLogoUrl":
+          "https://media-exp1.licdn.com/dms/image/C4E0BAQHUnyI5clnOrA/company-logo_200_200/0/1594675990525?e=2147483647&v=beta&t=uAzJSY4871gLxNliTtVNK3jRNiz2ndh2-6EbPNP-_-E",
+      "company": "Virtusa Polaris (Pvt) Ltd",
+      "applicationState": "rejected",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad3bb6cf92100de42d",
+      "title": "Java/Kotlin Developer",
+      "companyLogoUrl":
+          "https://zone24x7.com/wp-content/themes/zone24/image/zone-logo.png",
+      "company": "Zone 24x7 (Pvt) Ltd",
+      "applicationState": "processing",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330adc7d3e0c8e4695856",
+      "title":
+          "React/React Native/JavaScript - FullStack Developer (SE/SSE/ATL/TL Positions)",
+      "companyLogoUrl":
+          "https://media-exp1.licdn.com/dms/image/C4D0BAQHHJzr5P62wcA/company-logo_200_200/0/1657030127223?e=2147483647&v=beta&t=tgq0N5M_u-h_xbdihEyhOqLFDgD6DKgwgaSRQngjL6E",
+      "company": "Lucy Tech (Pvt) Ltd",
+      "applicationState": "applied",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ade1f33ae42d5aa523",
+      "title": "Golang Developer - SSE",
+      "companyLogoUrl":
+          "https://styles.redditmedia.com/t5_26a031/styles/communityIcon_gh4d6ql6g9f41.png",
+      "company": "WSO2 Inc",
+      "applicationState": "rejected",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad6dd1e7a7f370d82e",
+      "title": "Rust Developer - SSE (Compiler Design)",
+      "companyLogoUrl":
+          "https://styles.redditmedia.com/t5_26a031/styles/communityIcon_gh4d6ql6g9f41.png",
+      "company": "WSO2 Inc",
+      "applicationState": "processing",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330addf5c699c0fafcb8b",
+      "title": "Python Developer - SSE",
+      "companyLogoUrl":
+          "https://styles.redditmedia.com/t5_26a031/styles/communityIcon_gh4d6ql6g9f41.png",
+      "company": "WSO2 Inc",
+      "applicationState": "applied",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad30bfbfe3b103bee9",
+      "title": "Software Engineer (.Net/C# Development)",
+      "companyLogoUrl":
+          "https://media-exp1.licdn.com/dms/image/C4E0BAQHUnyI5clnOrA/company-logo_200_200/0/1594675990525?e=2147483647&v=beta&t=uAzJSY4871gLxNliTtVNK3jRNiz2ndh2-6EbPNP-_-E",
+      "company": "Virtusa Polaris (Pvt) Ltd",
+      "applicationState": "rejected",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad3bb6cf92100de42d",
+      "title": "Java/Kotlin Developer",
+      "companyLogoUrl":
+          "https://zone24x7.com/wp-content/themes/zone24/image/zone-logo.png",
+      "company": "Zone 24x7 (Pvt) Ltd",
+      "applicationState": "processing",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad30bfbfe3b103bee9",
+      "title": "Software Engineer (.Net/C# Development)",
+      "companyLogoUrl":
+          "https://media-exp1.licdn.com/dms/image/C4E0BAQHUnyI5clnOrA/company-logo_200_200/0/1594675990525?e=2147483647&v=beta&t=uAzJSY4871gLxNliTtVNK3jRNiz2ndh2-6EbPNP-_-E",
+      "company": "Virtusa Polaris (Pvt) Ltd",
+      "applicationState": "rejected",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad3bb6cf92100de42d",
+      "title": "Java/Kotlin Developer",
+      "companyLogoUrl":
+          "https://zone24x7.com/wp-content/themes/zone24/image/zone-logo.png",
+      "company": "Zone 24x7 (Pvt) Ltd",
+      "applicationState": "processing",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad30bfbfe3b103bee9",
+      "title": "Software Engineer (.Net/C# Development)",
+      "companyLogoUrl":
+          "https://media-exp1.licdn.com/dms/image/C4E0BAQHUnyI5clnOrA/company-logo_200_200/0/1594675990525?e=2147483647&v=beta&t=uAzJSY4871gLxNliTtVNK3jRNiz2ndh2-6EbPNP-_-E",
+      "company": "Virtusa Polaris (Pvt) Ltd",
+      "applicationState": "rejected",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad3bb6cf92100de42d",
+      "title": "Java/Kotlin Developer",
+      "companyLogoUrl":
+          "https://zone24x7.com/wp-content/themes/zone24/image/zone-logo.png",
+      "company": "Zone 24x7 (Pvt) Ltd",
+      "applicationState": "processing",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad30bfbfe3b103bee9",
+      "title": "Software Engineer (.Net/C# Development)",
+      "companyLogoUrl":
+          "https://media-exp1.licdn.com/dms/image/C4E0BAQHUnyI5clnOrA/company-logo_200_200/0/1594675990525?e=2147483647&v=beta&t=uAzJSY4871gLxNliTtVNK3jRNiz2ndh2-6EbPNP-_-E",
+      "company": "Virtusa Polaris (Pvt) Ltd",
+      "applicationState": "rejected",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad3bb6cf92100de42d",
+      "title": "Java/Kotlin Developer",
+      "companyLogoUrl":
+          "https://zone24x7.com/wp-content/themes/zone24/image/zone-logo.png",
+      "company": "Zone 24x7 (Pvt) Ltd",
+      "applicationState": "processing",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad30bfbfe3b103bee9",
+      "title": "Software Engineer (.Net/C# Development)",
+      "companyLogoUrl":
+          "https://media-exp1.licdn.com/dms/image/C4E0BAQHUnyI5clnOrA/company-logo_200_200/0/1594675990525?e=2147483647&v=beta&t=uAzJSY4871gLxNliTtVNK3jRNiz2ndh2-6EbPNP-_-E",
+      "company": "Virtusa Polaris (Pvt) Ltd",
+      "applicationState": "rejected",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad3bb6cf92100de42d",
+      "title": "Java/Kotlin Developer",
+      "companyLogoUrl":
+          "https://zone24x7.com/wp-content/themes/zone24/image/zone-logo.png",
+      "company": "Zone 24x7 (Pvt) Ltd",
+      "applicationState": "processing",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad30bfbfe3b103bee9",
+      "title": "Software Engineer (.Net/C# Development)",
+      "companyLogoUrl":
+          "https://media-exp1.licdn.com/dms/image/C4E0BAQHUnyI5clnOrA/company-logo_200_200/0/1594675990525?e=2147483647&v=beta&t=uAzJSY4871gLxNliTtVNK3jRNiz2ndh2-6EbPNP-_-E",
+      "company": "Virtusa Polaris (Pvt) Ltd",
+      "applicationState": "rejected",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+    {
+      "id": "631330ad3bb6cf92100de42d",
+      "title": "Java/Kotlin Developer",
+      "companyLogoUrl":
+          "https://zone24x7.com/wp-content/themes/zone24/image/zone-logo.png",
+      "company": "Zone 24x7 (Pvt) Ltd",
+      "applicationState": "processing",
+      "jobOpeningDate": "2022-09-04T05:48:25.300",
+      "jobAppliedDate": "2022-09-04T05:49:17.617",
+      "jobClosingDate": "2022-09-04T05:49:29.821",
+      "cvData": {
+        "id": "631330ad30bfbfe3b103bee9",
+        "name": "My_CV_2022_June.pdf",
+        "url": "https://google.com"
+      }
+    },
+  ]
+};
+
+

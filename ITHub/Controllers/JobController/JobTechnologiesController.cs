@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using ITHub.Data;
 using ITHub.Models;
 
-namespace ITHub.Controllers
+namespace ITHub.Controllers.JobController
 {
     public class JobTechnologiesController : Controller
     {
@@ -54,7 +54,7 @@ namespace ITHub.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Value")] JobTechnologies jobTechnologies)
+        public async Task<IActionResult> Create([Bind("Id,Name,ImageUrl,Value")] JobTechnologies jobTechnologies)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace ITHub.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Value")] JobTechnologies jobTechnologies)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,ImageUrl,Value")] JobTechnologies jobTechnologies)
         {
             if (id != jobTechnologies.Id)
             {
